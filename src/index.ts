@@ -4,7 +4,7 @@ const app = express()
 
 // Reagiert auf alle Aufrufe (*) mit dem geforderten Plain Text
 app.get('*', (req, res) => {
-  const div = 1776
+  const div = 1495
   const min = Math.ceil(10000 / div)
   const max = Math.floor(99999999 / div)
 
