@@ -2,7 +2,6 @@ import express from 'express'
 
 const app = express()
 
-// Reagiert auf alle Aufrufe (*) mit dem geforderten Plain Text
 app.get('*', (req, res) => {
   const div = 1495
   const min = Math.ceil(10000 / div)
@@ -11,7 +10,6 @@ app.get('*', (req, res) => {
   const randomMultiplier = Math.floor(Math.random() * (max - min + 1)) + min
   const result = randomMultiplier * div
 
-  // Liefert den reinen Text als Antwort
   res.type('text/plain').send(`Random value is ${result}`)
 })
 
